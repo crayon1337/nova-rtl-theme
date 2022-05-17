@@ -1,19 +1,19 @@
 {
-    "name": "pishran/nova-rtl-theme",
-    "description": "RTL layout for Laravel Nova.",
+    "name": "crayon/nova-rtl-theme",
+    "description": "RTL layout for Laravel Nova. This package has been forked from pishran/nova-rtl-theme",
     "keywords": [
         "laravel",
         "nova",
         "rtl",
         "theme"
     ],
-    "homepage": "https://github.com/pishran/nova-rtl-theme",
+    "homepage": "https://github.com/crayon/nova-rtl-theme",
     "license": "MIT",
     "authors": [
         {
-            "name": "Farid Aghili",
-            "email": "farid@pishranit.ir",
-            "homepage": "https://www.faridaghili.ir",
+            "name": "Mohamed Mahmoud",
+            "email": "mohammedarey2@gmail.com",
+            "homepage": "https://stack-flare.com",
             "role": "Developer"
         }
     ],
