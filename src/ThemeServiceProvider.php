@@ -2,7 +2,6 @@
 
 namespace Pishran\NovaRtlTheme;
 
-use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
@@ -16,8 +15,11 @@ class ThemeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if(auth()->check()) {
+            $locale = auth()->user()->id . '.locale';
+        }
         Nova::serving(function (ServingNova $event) {
-            if (in_array(Cookie::get('locale') ?? app()->getLocale(), config('nova-rtl-theme.locales', []))) {
+            if (in_array(cache()->get($locale) ?? app()->getLocale(), config('nova-rtl-theme.locales', []))) {
                 Nova::provideToScript([
                     'nova_rtl_theme' => [
                         'stylesheet' => config('nova-rtl-theme.stylesheet'),
